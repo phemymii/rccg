@@ -23,24 +23,23 @@ app.get("/contact", (req, res) => {
   res.sendfile(path.join(__dirname, "public", "/contact.html"));
 });
 
+const API_KEY = process.env.YOUTUBE_API_KEY;
+const CHANNEL_ID = process.env.YOUTUBE_CHANNEL_ID;
 app.get("/youtube-videos", async (req, res) => {
-  const API_KEY = process.env.YOUTUBE_API_KEY;
-  const CHANNEL_ID = process.env.YOUTUBE_CHANNEL_ID;
   const MAX_RESULTS = 50;
   try {
     const url = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=${MAX_RESULTS}`;
     const response = await axios.get(url);
+    console.log(response);
     const data = response.data;
     res.json(data);
   } catch (error) {
-    console.error("Error fetching YouTube data:", error);
+    console.error("Error fetching YouTube data:", error.response);
     res.status(500).json({ error: "Failed to fetch YouTube data" });
   }
 });
 
 app.get("/one-youtube-video", async (req, res) => {
-  const API_KEY = process.env.YOUTUBE_API_KEY;
-  const CHANNEL_ID = process.env.YOUTUBE_CHANNEL_ID;
   const MAX_RESULTS = 1;
   try {
     const url = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=${MAX_RESULTS}`;

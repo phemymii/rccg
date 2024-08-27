@@ -31,7 +31,7 @@ function formatDate(isoDateString) {
 function renderVideos(page) {
   const start = (page - 1) * videosPerPage;
   const end = start + videosPerPage;
-  const paginatedVideos = videos.slice(start, end);
+  const paginatedVideos = videos?.slice(start, end);
 
   const videoGrid = document.getElementById("video");
   videoGrid.innerHTML = ""; // Clear previous videos
