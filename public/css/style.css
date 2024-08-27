@@ -2409,9 +2409,10 @@ textarea {
 .hero,
 .hero > .container > .row {
   height: 100vh;
-  min-height: 640px;
+  min-height: 100vh;
 }
 .hero.overlay:before {
+  height: 100vh;
   position: absolute;
   content: "";
   left: 0;
