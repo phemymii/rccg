@@ -6,6 +6,7 @@ const axios = require("axios");
 require("dotenv").config();
 const nodemailer = require("nodemailer");
 const bodyParser = require("body-parser");
+// app.use(bodyParser.json());
 const router = express.Router();
 router.use(bodyParser.json());
 

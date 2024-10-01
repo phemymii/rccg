@@ -103,9 +103,9 @@ app.post("/rccgcontact", async function (req, res) {
   }
 });
 
-app.listen(process.env.PORT || 4000, () => {
-  console.log("Server is running on http://localhost:4000");
-});
+// app.listen(process.env.PORT || 4000, () => {
+//   console.log("Server is running on http://localhost:4000");
+// });
 
 app.use("./netlify/functions/api", router);
 module.exports.handler = serverless(app);
