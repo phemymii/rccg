@@ -6,28 +6,29 @@ const axios = require("axios");
 require("dotenv").config();
 const nodemailer = require("nodemailer");
 const bodyParser = require("body-parser");
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
 const router = express.Router();
+router.use(bodyParser.json());
 
 // Serve static files from the 'public' directory
-app.use(express.static(path.join(__dirname, "public")));
+router.use(express.static(path.join(__dirname, "public")));
 
 // Route to serve the index.html file for the root URL
-app.get("/", (req, res) => {
+router.get("/", (req, res) => {
   res.sendfile(path.join(__dirname, "public", "/index.html"));
 });
 
-app.get("/sermon", (req, res) => {
+router.get("/sermon", (req, res) => {
   res.sendfile(path.join(__dirname, "public", "/sermon.html"));
 });
 
-app.get("/contact", (req, res) => {
+router.get("/contact", (req, res) => {
   res.sendfile(path.join(__dirname, "public", "/contact.html"));
 });
 
 const API_KEY = process.env.YOUTUBE_API_KEY;
 const CHANNEL_ID = process.env.YOUTUBE_CHANNEL_ID;
-app.get("/youtube-videos", async (req, res) => {
+router.get("/youtube-videos", async (req, res) => {
   const MAX_RESULTS = 50;
   try {
     const url = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=${MAX_RESULTS}`;
@@ -41,7 +42,7 @@ app.get("/youtube-videos", async (req, res) => {
   }
 });
 
-app.get("/one-youtube-video", async (req, res) => {
+router.get("/one-youtube-video", async (req, res) => {
   const MAX_RESULTS = 1;
   try {
     const url = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=${MAX_RESULTS}`;
@@ -54,7 +55,7 @@ app.get("/one-youtube-video", async (req, res) => {
   }
 });
 
-app.post("/rccgcontact", async function (req, res) {
+router.post("/rccgcontact", async function (req, res) {
   const { name, email, phone, message } = req.body;
   const MAILER_EMAIL = process.env.MAILER_EMAIL;
   const MAILER_PASSWORD = process.env.MAILER_PASSWORD;
