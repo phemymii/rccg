@@ -28,7 +28,7 @@ router.get("/contact", (req, res) => {
 
 const API_KEY = process.env.YOUTUBE_API_KEY;
 const CHANNEL_ID = process.env.YOUTUBE_CHANNEL_ID;
-router.get("/youtube-videos", async (req, res) => {
+app.get("/youtube-videos", async (req, res) => {
   const MAX_RESULTS = 50;
   try {
     const url = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=${MAX_RESULTS}`;
@@ -55,7 +55,7 @@ router.get("/one-youtube-video", async (req, res) => {
   }
 });
 
-router.post("/rccgcontact", async function (req, res) {
+app.post("/rccgcontact", async function (req, res) {
   const { name, email, phone, message } = req.body;
   const MAILER_EMAIL = process.env.MAILER_EMAIL;
   const MAILER_PASSWORD = process.env.MAILER_PASSWORD;
