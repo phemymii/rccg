@@ -16,6 +16,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/sermon", (req, res) => {
+  console.log("jjjjjjjjjjjjjjjjjjjjjjjjjjjjj");
   res.sendfile(path.join(__dirname, "public", "/sermon.html"));
 });
 

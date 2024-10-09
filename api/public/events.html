@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Mirrored from preview.colorlib.com/theme/byfaith/events.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 Jan 2023 22:23:12 GMT -->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="fonts/icomoon/style.css" />
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css" />
+    <link rel="stylesheet" href="css/tiny-slider.css" />
+    <link rel="stylesheet" href="css/glightbox.min.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>ByFaith &mdash; Free Bootstrap 5 Website Template by Colorlib</title>
+    <script nonce="43dc9718-2332-4ea6-b250-4e1aea9fd402">
+      (function (w, d) {
+        !(function (f, g, h, i) {
+          f[h] = f[h] || {};
+          f[h].executed = [];
+          f.zaraz = { deferred: [], listeners: [] };
+          f.zaraz.q = [];
+          f.zaraz._f = function (j) {
+            return function () {
+              var k = Array.prototype.slice.call(arguments);
+              f.zaraz.q.push({ m: j, a: k });
+            };
+          };
+          for (const l of ["track", "set", "debug"]) f.zaraz[l] = f.zaraz._f(l);
+          f.zaraz.init = () => {
+            var m = g.getElementsByTagName(i)[0],
+              n = g.createElement(i),
+              o = g.getElementsByTagName("title")[0];
+            o && (f[h].t = g.getElementsByTagName("title")[0].text);
+            f[h].x = Math.random();
+            f[h].w = f.screen.width;
+            f[h].h = f.screen.height;
+            f[h].j = f.innerHeight;
+            f[h].e = f.innerWidth;
+            f[h].l = f.location.href;
+            f[h].r = g.referrer;
+            f[h].k = f.screen.colorDepth;
+            f[h].n = g.characterSet;
+            f[h].o = new Date().getTimezoneOffset();
+            if (f.dataLayer)
+              for (const s of Object.entries(
+                Object.entries(dataLayer).reduce((t, u) => ({
+                  ...t[1],
+                  ...u[1],
+                }))
+              ))
+                zaraz.set(s[0], s[1], { scope: "page" });
+            f[h].q = [];
+            for (; f.zaraz.q.length; ) {
+              const v = f.zaraz.q.shift();
+              f[h].q.push(v);
+            }
+            n.defer = !0;
+            for (const w of [localStorage, sessionStorage])
+              Object.keys(w || {})
+                .filter((y) => y.startsWith("_zaraz_"))
+                .forEach((x) => {
+                  try {
+                    f[h]["z_" + x.slice(7)] = JSON.parse(w.getItem(x));
+                  } catch {
+                    f[h]["z_" + x.slice(7)] = w.getItem(x);
+                  }
+                });
+            n.referrerPolicy = "origin";
+            n.src =
+              "../../cdn-cgi/zaraz/sd0d9.js?z=" +
+              btoa(encodeURIComponent(JSON.stringify(f[h])));
+            m.parentNode.insertBefore(n, m);
+          };
+          ["complete", "interactive"].includes(g.readyState)
+            ? zaraz.init()
+            : f.addEventListener("DOMContentLoaded", zaraz.init);
+        })(w, d, "zarazData", "script");
+      })(window, document);
+    </script>
+  </head>
+  <body>
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close">
+          <span class="icofont-close js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    <nav class="site-nav">
+      <div class="container">
+        <div class="site-navigation">
+          <a href="index.html" class="logo m-0 float-left">ByFaith</a>
+          <ul
+            class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end"
+          >
+            <li><a href="index.html">Home</a></li>
+            <li class="has-children">
+              <a href="sermons.html">Sermons</a>
+              <ul class="dropdown">
+                <li><a href="#">Sermons</a></li>
+                <li><a href="#">Sermons Single</a></li>
+                <li class="has-children">
+                  <a href="#">Dropdown</a>
+                  <ul class="dropdown">
+                    <li><a href="#">Sub Menu One</a></li>
+                    <li><a href="#">Sub Menu Two</a></li>
+                    <li><a href="#">Sub Menu Three</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="ministry.html">Ministries</a></li>
+            <li class="active"><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <a
+            href="#"
+            class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block d-lg-none light"
+            data-toggle="collapse"
+            data-target="#main-navbar"
+          >
+            <span></span>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="hero page-inner bg-secondary">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-lg-9 text-center mt-5">
+            <h1 class="heading" data-aos="fade-up">Events</h1>
+            <nav
+              aria-label="breadcrumb"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <ol class="breadcrumb text-center justify-content-center">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li
+                  class="breadcrumb-item active text-white-50"
+                  aria-current="page"
+                >
+                  Events
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row g-5">
+          <div
+            class="col-12 col-sm-6 col-md-6 col-lg-4"
+            data-aos="fade-up"
+            data-aos-delay="0"
+          >
+            <div class="sermon-entry">
+              <a href="#"
+                ><img
+                  src="images/img_1.jpg"
+                  alt="Image"
+                  class="img-fluid mb-3 rounded"
+              /></a>
+              <div class="sermon-body">
+                <span class="date"
+                  >15 Jan 2020 <span class="mx-2">&bullet;</span> By Pastor
+                  Campbell
+                </span>
+                <h3 class="mb-2">
+                  <a href="#">Living and Sharing The Gospel</a>
+                </h3>
+                <p class="mb-5">
+                  Far far away, behind the word mountains, far from the
+                  countries Vokalia and Consonantia
+                </p>
+                <p><a href="#" class="btn btn-primary btn-sm">Read more</a></p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-sm-6 col-md-6 col-lg-4"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="sermon-entry">
+              <a href="#"
+                ><img
+                  src="images/img_2.jpg"
+                  alt="Image"
+                  class="img-fluid mb-3 rounded"
+              /></a>
+              <div class="sermon-body">
+                <span class="date"
+                  >15 Jan 2020 <span class="mx-2">&bullet;</span> By Pastor
+                  Campbell
+                </span>
+                <h3 class="mb-2">
+                  <a href="#">Living and Sharing The Gospel</a>
+                </h3>
+                <p class="mb-5">
+                  Far far away, behind the word mountains, far from the
+                  countries Vokalia and Consonantia
+                </p>
+                <p><a href="#" class="btn btn-primary btn-sm">Read more</a></p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-sm-6 col-md-6 col-lg-4"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="sermon-entry">
+              <a href="#"
+                ><img
+                  src="images/img_4.jpg"
+                  alt="Image"
+                  class="img-fluid mb-3 rounded"
+              /></a>
+              <div class="sermon-body">
+                <span class="date"
+                  >15 Jan 2020 <span class="mx-2">&bullet;</span> By Pastor
+                  Campbell
+                </span>
+                <h3 class="mb-2">
+                  <a href="#">Living and Sharing The Gospel</a>
+                </h3>
+                <p class="mb-5">
+                  Far far away, behind the word mountains, far from the
+                  countries Vokalia and Consonantia
+                </p>
+                <p><a href="#" class="btn btn-primary btn-sm">Read more</a></p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-sm-6 col-md-6 col-lg-4"
+            data-aos="fade-up"
+            data-aos-delay="0"
+          >
+            <div class="sermon-entry">
+              <a href="#"
+                ><img
+                  src="images/img_1.jpg"
+                  alt="Image"
+                  class="img-fluid mb-3 rounded"
+              /></a>
+              <div class="sermon-body">
+                <span class="date"
+                  >15 Jan 2020 <span class="mx-2">&bullet;</span> By Pastor
+                  Campbell
+                </span>
+                <h3 class="mb-2">
+                  <a href="#">Living and Sharing The Gospel</a>
+                </h3>
+                <p class="mb-5">
+                  Far far away, behind the word mountains, far from the
+                  countries Vokalia and Consonantia
+                </p>
+                <p><a href="#" class="btn btn-primary btn-sm">Read more</a></p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-sm-6 col-md-6 col-lg-4"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="sermon-entry">
+              <a href="#"
+                ><img
+                  src="images/img_2.jpg"
+                  alt="Image"
+                  class="img-fluid mb-3 rounded"
+              /></a>
+              <div class="sermon-body">
+                <span class="date"
+                  >15 Jan 2020 <span class="mx-2">&bullet;</span> By Pastor
+                  Campbell
+                </span>
+                <h3 class="mb-2">
+                  <a href="#">Living and Sharing The Gospel</a>
+                </h3>
+                <p class="mb-5">
+                  Far far away, behind the word mountains, far from the
+                  countries Vokalia and Consonantia
+                </p>
+                <p><a href="#" class="btn btn-primary btn-sm">Read more</a></p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-sm-6 col-md-6 col-lg-4"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="sermon-entry">
+              <a href="#"
+                ><img
+                  src="images/img_4.jpg"
+                  alt="Image"
+                  class="img-fluid mb-3 rounded"
+              /></a>
+              <div class="sermon-body">
+                <span class="date"
+                  >15 Jan 2020 <span class="mx-2">&bullet;</span> By Pastor
+                  Campbell
+                </span>
+                <h3 class="mb-2">
+                  <a href="#">Living and Sharing The Gospel</a>
+                </h3>
+                <p class="mb-5">
+                  Far far away, behind the word mountains, far from the
+                  countries Vokalia and Consonantia
+                </p>
+                <p><a href="#" class="btn btn-primary btn-sm">Read more</a></p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-sm-6 col-md-6 col-lg-4"
+            data-aos="fade-up"
+            data-aos-delay="0"
+          >
+            <div class="sermon-entry">
+              <a href="#"
+                ><img
+                  src="images/img_1.jpg"
+                  alt="Image"
+                  class="img-fluid mb-3 rounded"
+              /></a>
+              <div class="sermon-body">
+                <span class="date"
+                  >15 Jan 2020 <span class="mx-2">&bullet;</span> By Pastor
+                  Campbell
+                </span>
+                <h3 class="mb-2">
+                  <a href="#">Living and Sharing The Gospel</a>
+                </h3>
+                <p class="mb-5">
+                  Far far away, behind the word mountains, far from the
+                  countries Vokalia and Consonantia
+                </p>
+                <p><a href="#" class="btn btn-primary btn-sm">Read more</a></p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-sm-6 col-md-6 col-lg-4"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="sermon-entry">
+              <a href="#"
+                ><img
+                  src="images/img_2.jpg"
+                  alt="Image"
+                  class="img-fluid mb-3 rounded"
+              /></a>
+              <div class="sermon-body">
+                <span class="date"
+                  >15 Jan 2020 <span class="mx-2">&bullet;</span> By Pastor
+                  Campbell
+                </span>
+                <h3 class="mb-2">
+                  <a href="#">Living and Sharing The Gospel</a>
+                </h3>
+                <p class="mb-5">
+                  Far far away, behind the word mountains, far from the
+                  countries Vokalia and Consonantia
+                </p>
+                <p><a href="#" class="btn btn-primary btn-sm">Read more</a></p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-sm-6 col-md-6 col-lg-4"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="sermon-entry">
+              <a href="#"
+                ><img
+                  src="images/img_4.jpg"
+                  alt="Image"
+                  class="img-fluid mb-3 rounded"
+              /></a>
+              <div class="sermon-body">
+                <span class="date"
+                  >15 Jan 2020 <span class="mx-2">&bullet;</span> By Pastor
+                  Campbell
+                </span>
+                <h3 class="mb-2">
+                  <a href="#">Living and Sharing The Gospel</a>
+                </h3>
+                <p class="mb-5">
+                  Far far away, behind the word mountains, far from the
+                  countries Vokalia and Consonantia
+                </p>
+                <p><a href="#" class="btn btn-primary btn-sm">Read more</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row align-items-center py-5">
+          <div class="col-lg-6 mx-auto text-center">
+            <div class="custom-pagination">
+              <a href="#">1</a>
+              <a href="#" class="active">2</a>
+              <a href="#">3</a>
+              <a href="#">4</a>
+              <a href="#">5</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="widget">
+              <h3>Contact</h3>
+              <address>43 Raymouth Rd. Baltemoer, London 3910</address>
+              <ul class="list-unstyled links">
+                <li><a href="tel://11234567890">+1(123)-456-7890</a></li>
+                <li><a href="tel://11234567890">+1(123)-456-7890</a></li>
+                <li>
+                  <a
+                    href="https://preview.colorlib.com/cdn-cgi/l/email-protection#3a53545c557a57435e55575b535414595557"
+                    ><span
+                      class="__cf_email__"
+                      data-cfemail="cfa6a1a9a08fa2b6aba0a2aea6a1e1aca0a2"
+                      >[email&#160;protected]</span
+                    ></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="widget">
+              <h3>Sources</h3>
+              <ul class="list-unstyled float-start links">
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Vision</a></li>
+                <li><a href="#">Mission</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Privacy</a></li>
+              </ul>
+              <ul class="list-unstyled float-start links">
+                <li><a href="#">Partners</a></li>
+                <li><a href="#">Business</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Creative</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="widget">
+              <h3>Links</h3>
+              <ul class="list-unstyled links">
+                <li><a href="#">Our Vision</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact us</a></li>
+              </ul>
+              <ul class="list-unstyled social">
+                <li>
+                  <a href="#"><span class="icon-instagram"></span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="icon-twitter"></span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="icon-facebook"></span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="icon-linkedin"></span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="icon-pinterest"></span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="icon-dribbble"></span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-12 text-center">
+            <p class="mb-0">
+              Copyright &copy;
+              <script
+                data-cfasync="false"
+                src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+              ></script>
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              All rights reserved | This template is made with
+              <i class="icon-heart text-danger" aria-hidden="true"></i> by
+              <a
+                href="https://colorlib.com/"
+                target="_blank"
+                rel="nofollow noopener"
+                >Colorlib</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="overlayer"></div>
+    <div class="loader">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/tiny-slider.js"></script>
+    <script src="js/glightbox.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/custom.js"></script>
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-23581568-13");
+    </script>
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993"
+      integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA=="
+      data-cf-beacon='{"rayId":"78babbb59a6c54e2","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2022.11.3","si":100}'
+      crossorigin="anonymous"
+    ></script>
+  </body>
+
+  <!-- Mirrored from preview.colorlib.com/theme/byfaith/events.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 Jan 2023 22:23:12 GMT -->
+</html>

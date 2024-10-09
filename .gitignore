@@ -2,3 +2,5 @@
 .space
 # Local Netlify folder
 .netlify
+
+.vercel
