@@ -30,11 +30,11 @@ app.get("/youtube-videos", async (req, res) => {
   try {
     const url = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=${MAX_RESULTS}`;
     const response = await axios.get(url);
-    console.log(response);
+    // console.log(response);
     const data = response.data;
     res.json(data);
   } catch (error) {
-    console.error("Error fetching YouTube data:", error.response);
+    // console.error("Error fetching YouTube data:", error.response);
     res.status(500).json({ error: "Failed to fetch YouTube data" });
   }
 });
@@ -47,7 +47,7 @@ app.get("/one-youtube-video", async (req, res) => {
     const data = response.data;
     res.json(data);
   } catch (error) {
-    console.error("Error fetching YouTube data:", error);
+    // console.error("Error fetching YouTube data:", error);
     res.status(500).json({ error: "Failed to fetch YouTube data" });
   }
 });
